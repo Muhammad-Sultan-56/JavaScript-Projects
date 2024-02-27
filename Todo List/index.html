@@ -12,20 +12,22 @@
 
 </head>
 
-<body>
+<body class="bg-light">
 
-    <div class="container m-0 shadow w-75 mx-auto my-4 p-3">
+    <div class="container m-0 shadow w-75 mx-auto my-4 p-3 bg-white">
 
         <h2 class="text-center my-4">Todo List in <span class="text-primary">JavaScript</span></h2>
 
+        <!-- Add user input button -->
         <div class="w-50 mx-auto my-3">
             <div class="input-group mb-3">
-                <input type="text" class="form-control shadow-none" placeholder="Enter here..." aria-describedby="button-addon1">
-                <button class="btn btn-primary shadow-none" type="button" id="addUser">Add User</button>
+                <input type="text" class="form-control shadow-none" id="addUserInput" placeholder="Enter here..." aria-describedby="button-addon1">
+                <button class="btn btn-primary shadow-none" type="button" id="addUserBtn">Add User</button>
             </div>
         </div>
 
 
+        <!-- Table to show users -->
         <div class="w-75 mx-auto">
             <table class="table">
                 <thead>
@@ -35,22 +37,8 @@
                     <th scope="col">Actions</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td><button class="btn btn-primary btn-sm me-2"><i class="bi bi-pencil-square"></i></button>    <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i> </button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td><button class="btn btn-primary btn-sm me-2"><i class="bi bi-pencil-square"></i></button>    <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i> </button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td >Larry the Bird</td>
-                    <td><button class="btn btn-primary btn-sm me-2"><i class="bi bi-pencil-square"></i></button>    <button class="btn btn-danger btn-sm"><i class="bi bi-trash-fill"></i> </button></td>
-                  </tr>
+                <tbody id="records">
+                
                 </tbody>
               </table>
         </div>
@@ -59,6 +47,7 @@
     </div><!-- container -->
     
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>
