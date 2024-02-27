@@ -8,7 +8,7 @@ let edit_id = null;
 
 let objStr = localStorage.getItem('name');
 
-if(objStr != null){
+if (objStr != null) {
     userArray = JSON.parse(objStr);
 }
 
@@ -16,15 +16,14 @@ displayInfo();
 addUserBtn.onclick = () => {
     const userName = addUserInput.value;
 
-    if(edit_id != null){
-        userArray.splice(edit_id , 1 , {'name' : userName} );
+    if (edit_id != null) {
+        userArray.splice(edit_id, 1, { 'name': userName });
         edit_id = null;
     }
-    else{
-        userArray.push({'name' : userName});
+    else {
+        userArray.push({ 'name': userName });
     }
-
-      saveInfo(userArray);
+    saveInfo(userArray);
     addUserInput.value = "";
     addUserBtn.innerText = textBtn;
 }
@@ -33,21 +32,18 @@ addUserBtn.onclick = () => {
 function saveInfo(userArray) {
 
     let userStr = JSON.stringify(userArray);
-    localStorage.setItem('name' , userStr)
+    localStorage.setItem('name', userStr)
     displayInfo();
-
 }
 
 // function to display info
 function displayInfo() {
-
     let statement = "";
 
-  
-    userArray.forEach((name , i) => {
+    userArray.forEach((name, i) => {
         statement += `
         <tr>
-        <td>${i+1}</td>
+        <td>${i + 1}</td>
         <td>${name.name}</td>
         <td>
           <button class="btn btn-primary btn-sm me-2" onclick='editInfo(${i})'><i class="bi bi-pencil-square"></i></button>    
@@ -55,27 +51,20 @@ function displayInfo() {
         </td>
       </tr>`;
     });
-
     records.innerHTML = statement;
-
 }
-
 
 // function to edit info
 function editInfo(id) {
-   edit_id = id;
-   addUserInput.value = userArray[id].name;
-   addUserBtn.innerText = "Save Changes";
-
+    edit_id = id;
+    addUserInput.value = userArray[id].name;
+    addUserBtn.innerText = "Save Changes";
 }
 
 // function to delete info
 function deleteInfo(id) {
-    if(confirm("Are you Sure want to delete this Record")){
-        userArray.splice(id , 1 );
+    if (confirm("Are you Sure want to delete this Record")) {
+        userArray.splice(id, 1);
         saveInfo(userArray);
     }
-
-
-
 }
