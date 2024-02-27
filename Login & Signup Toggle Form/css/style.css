@@ -1,0 +1,97 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container{
+   min-height: 75vh;
+   width: 31%;
+   background: linear-gradient(to bottom right,  white 40% , rgb(177, 239, 177));
+   box-shadow: 1px 1px 5px gray;
+   border-radius: 10px;
+box-sizing: border-box;
+}
+.toggleBtns{
+    background-color: rgba(0, 128, 0, 0.775);
+    width: 85%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 50px;
+    padding: 2px;
+    box-shadow: 0px 0px 5px gray;
+
+}
+.toggle{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size:  1.2rem;
+    padding: 1rem 1.2rem;
+    outline: none;
+    width: 50%;
+}
+#move{
+    position: absolute;
+    background-color: white;
+    border: none;
+    color: rgba(0, 128, 0, 0.775);
+    font-size:  1.2rem;
+    padding: 1rem 1.2rem;
+    outline: none;
+    width: 50%;
+    border-radius: 50px;
+    transition: transform 0.3s;
+
+}
+.right{
+    transform: translateX(98%);
+    transition: all 0.3s ease-in-out;
+}
+
+.inputGroup{
+    width: 70%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+.inputGroup input{
+    padding: 0.9rem ;
+    width: 100%;
+    outline: none;
+    box-shadow: 1px 1px 5px gray;
+    border: none;
+    border-radius: 25px;
+}
+.inputGroup button{
+    padding: 0.9rem ;
+    width: 75%;
+    outline: none;
+    box-shadow: 1px 1px 5px gray;
+    border: none;
+    background-color: rgba(0, 128, 0, 0.775);
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 25px;
+}
+
+.inputGroup button:hover{
+ background-color: black;
+}
+.form{
+    display: none;
+}
+.signupForm{
+    display: block;
+}
+.loginForm{
+    display: block;
+}
