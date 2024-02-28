@@ -10,11 +10,16 @@
 <body>
 
     <main>
-        <h1>Tic Tac Game</h1>
+        <h1 id="title">Tic Tac Game</h1>
+        <div class="game-text">
+            <p id="result"></p>
+            <button id="new-btn" class="setting-btns">New Game</button>
+        </div>
+
         <div class="container">
             <div class="game">
-                <button class="btns">X</button>
-                <button class="btns">O</button>
+                <button class="btns"></button>
+                <button class="btns"></button>
                 <button class="btns"></button>
                 <button class="btns"></button>
                 <button class="btns"></button>
@@ -25,7 +30,8 @@
             </div>
         </div>
 
-        <button id="reset-btn">Reset Game</button>
+        <button id="reset-btn" class="setting-btns">Reset Game</button>
+
     </main>
 
     <!-- javascript -->
