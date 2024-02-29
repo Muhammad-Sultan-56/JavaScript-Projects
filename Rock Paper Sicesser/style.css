@@ -4,9 +4,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 nav{
-    background-color: rgb(8, 107, 69);
+    background-color: rgb(8, 18, 107);
     display: flex;
     align-items: center;
+    justify-content: center;
     color: white;
     padding: 10px;
     gap: 1rem;
@@ -17,41 +18,48 @@ nav{
     width: 50%;
     margin: 30px auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
 .choice img{
 border-radius: 50%;
+margin: 10px auto;
 }
 .choice img:hover{
-    border: 3px solid rgb(29, 29, 29);
+    border: 6px solidrgb(8, 18, 107);
 }
 
 /* score section */
 
 
-.score{
+.score-board{
     width: 50%;
     margin: 50px auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
-.score p{
-font-size: 1.5rem;
+.score-board p{
+font-size: 1.8rem;
+margin: 10px auto;
+
 }
-.try-btn{
+
+
+.msg-container{
     width: 50%;
     margin: 50px auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.try-btn button{
-    padding: 15px 20px;
+#msg{
+    padding: 10px 20px;
     font-size: 1.1rem;
     color: white;
     border: none;
-    border-radius: 1rem;
-    background-color: rgb(8, 107, 69);
+    border-radius: 10px;
+    background-color:rgb(8, 18, 107);
 }

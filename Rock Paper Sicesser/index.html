@@ -17,40 +17,38 @@
     <!-- game image section -->
 
     <div class="choices">
-        <div class="choice">
+        <div class="choice" id="rock">
             <img src="./imgs/rock.png" height="150px" width="150px" alt="Rock Image">
         </div>
 
-        <div class="choice">
+        <div class="choice" id="paper">
             <img src="./imgs/paper.png" height="150px" width="150px" alt="Paper Image">
         </div>
 
-
-        <div class="choice">
+        <div class="choice" id="scissors">
             <img src="./imgs/scissors.png" height="150px" width="150px" alt="Scissor Image">
         </div>
     </div>
 
-
     <!-- score section -->
-    <div class="score">
-        <div class="user-score">
-            <p> You : 2 </p>
+    <div class="score-board">
+        <div class="score">
+            <p> You : <span id="user"> 0 </span></p>
         </div>
 
-        <div class="computer-score">
-            <p> Computer : 2 </p>
+        <div class="score">
+            <p> Computer : <span id="computer"> 0 </span></p>
         </div>
 
     </div>
 
-
-    <div class="try-btn">
-        <button id="btn">You Lost ! Try Again</button>
+<!-- message Btn -->
+    <div class="msg-container">
+        <p id="msg">Play Your Move</p>
     </div>
 
-
-
+<!-- javascript links -->
+<script src="./script.js"></script>
 </body>
 
 </html>
