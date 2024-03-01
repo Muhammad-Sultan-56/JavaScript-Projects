@@ -68,3 +68,25 @@ function deleteInfo(id) {
         saveInfo(userArray);
     }
 }
+
+
+// search functionality of the todo list
+
+let searchInput = document.querySelector("#search");
+let allTr = document.querySelectorAll("#records tr")
+
+searchInput.addEventListener("input", function (e) {
+    let searchText = e.target.value.toLowerCase();
+    records.innerHTML = "";
+    allTr.forEach(tr=>{
+        let allTds = tr.querySelectorAll("td");
+        if(allTds[1].innerText.toLowerCase().indexOf(searchText) > -1){
+            records.appendChild(tr);
+        }
+    })
+
+    if(records.innerHTML == ""){
+        records.innerText = "No Records Found";
+    }
+
+})

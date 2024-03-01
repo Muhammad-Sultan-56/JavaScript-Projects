@@ -14,15 +14,31 @@
 
 <body class="bg-light">
 
-    <div class="container m-0 shadow w-75 mx-auto my-4 p-3 bg-white">
+    <div class="container shadow w-75 mx-auto mt-4 bg-white p-3">
 
-        <h2 class="text-center my-4">Todo List in <span class="text-primary">JavaScript</span></h2>
+        <!-- navbar start -->
+
+        <div class="navbar navbar-light mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold fs-4" href="#">
+                    Todo List in <span class="text-primary">JavaScript</span>
+                </a>
+
+                <form class="d-flex">
+                    <input class="form-control shadow-none" type="search" placeholder="Search here..." aria-label="Search" id="search">
+                </form>
+            </div>
+        </div>
+        <!-- navbar end -->
+
 
         <!-- Add user input button -->
-        <div class="w-50 mx-auto my-3">
+        <div class="w-50 mx-auto">
             <div class="input-group mb-3">
-                <input type="text" class="form-control shadow-none" id="addUserInput" placeholder="Enter here..." aria-describedby="button-addon1">
-                <button class="btn btn-primary shadow-none" type="button" id="addUserBtn"><i class="bi bi-plus"></i> Add User</button>
+                <input type="text" class="form-control shadow-none" id="addUserInput" placeholder="Enter here..."
+                    aria-describedby="button-addon1">
+                <button class="btn btn-primary shadow-none" type="button" id="addUserBtn"><i class="bi bi-plus"></i> Add
+                    User</button>
             </div>
         </div>
 
@@ -30,20 +46,20 @@
         <div class="w-75 mx-auto">
             <table class="table">
                 <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Actions</th>
-                  </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Actions</th>
+                    </tr>
                 </thead>
                 <tbody id="records">
-                
+
                 </tbody>
-              </table>
+            </table>
         </div>
-        
+
     </div><!-- container -->
-    
+
     <script src="js/script.js"></script>
 </body>
 
