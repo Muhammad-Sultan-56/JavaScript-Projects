@@ -30,7 +30,6 @@ addUserBtn.onclick = () => {
 
 // function to save info
 function saveInfo(userArray) {
-
     let userStr = JSON.stringify(userArray);
     localStorage.setItem('name', userStr)
     displayInfo();
