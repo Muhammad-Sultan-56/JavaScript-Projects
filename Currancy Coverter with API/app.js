@@ -1,6 +1,13 @@
-let BASE_URL = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd/pkr.json";
+let BASE_URL = 
+"https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
 
 let dropdowns = document.querySelectorAll(".currency-dropdowns select");
+
+let btn = document.querySelector("#btn");
+
+let toAmt = document.querySelector(".to select");
+let fromAmt = document.querySelector(".from select");
+
 
 
 
@@ -29,16 +36,31 @@ for (let select of dropdowns) {
 
 }
 
-// function to change flag 
 
+// function to change flag
 const updateFlag = (element) => {
+    let currCode = element.value;
+    let countryCode = countryList[currCode];
+    let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
+    let img = element.parentElement.querySelector("img"); // Use querySelector for a single image
+    img.src = newSrc; // Update the src attribute
+};
 
-   let currCode = element.value;
-   let countryCode = countryList[currCode];
-   let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
-  let img = element.parentElement.querySelectorAll("img");
-   img.src = newSrc;
-   
+btn.addEventListener("click" , async (e) => {
+e.preventDefault();
+    let Useramount = document.querySelector("#Useramount");
+    let amtVal = Useramount.value;
+    if(amtVal == "" || amtVal < 1){
+        amtVal.value = 1;
+        Useramount = "1";
+    }
+    
+    const URL = `${BASE_URL}/${fromAmt.value.toLowerCase()}/${toAmt.value.toLowerCase()}.json`;
+    let response = await fetch(URL);
+    let data = await response.json();
+    let rate = data.toAmt.value.toLowerCase();
+    let finalAmount = rate * amtVal;
 
-
-}
+    let result = document.querySelector("#result");
+    result.innerText = `${amtVal} ${fromAmt.value} = ${finalAmount} ${toAmt}`
+})
