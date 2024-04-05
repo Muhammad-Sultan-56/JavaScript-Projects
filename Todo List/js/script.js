@@ -1,8 +1,9 @@
 const addUserBtn = document.getElementById("addUserBtn");
-const textBtn = addUserBtn.innerText;
-
 const addUserInput = document.getElementById("addUserInput");
+
+const textBtn = addUserBtn.innerText;
 const records = document.getElementById("records");
+
 let userArray = [];
 let edit_id = null;
 
@@ -53,12 +54,16 @@ function displayInfo() {
     records.innerHTML = statement;
 }
 
+
+
 // function to edit info
 function editInfo(id) {
     edit_id = id;
     addUserInput.value = userArray[id].name;
     addUserBtn.innerText = "Save Changes";
 }
+
+
 
 // function to delete info
 function deleteInfo(id) {
