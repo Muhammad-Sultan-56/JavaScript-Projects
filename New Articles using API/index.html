@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Site</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+
+    <link rel="icon" type="image/x-icon" href="./imgs/news Logo.png">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <h4 class="text-primary me-2">Best</h4><img src="./imgs/news Logo.png" height="50px" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" aria-current="page" href="#">All News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mx-2" href="#">Business</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 mx-2" href="#">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="#">Politics</a>
+                    </li>
+
+                </ul>
+                <div class="d-flex">
+                    <input class="form-control me-1 form-control-sm shadow-none" type="search" id="searchText" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-primary btn-sm shadow-none" id="searchBtn">Search</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4 p-2">
+
+        <h2 class="text-center">All <span class="text-primary">News</span></h2>
+
+        <div class="row" id="main">
+
+            <div class="col-md-6 col-lg-4  mb-3 p-3">
+                <div class="card border-0 shadow mx-auto " style="width: 100%;">
+                    <img src="./imgs/17449.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <h6 class="text-muted">Publish Date 24-04-2024</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- Bootstrap js -->
+    <script src="./Bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
