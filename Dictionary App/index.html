@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <!-- Bootstrap links -->
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <nav class="bg-success p-2 mb-4">
+        <h3 class="text-white">Dictionary App</h3>
+    </nav>
+
+    <div class="container w-75 shadow p-4">
+        <!-- form to get word -->
+        <form class="d-flex mb-3">
+            <input type="text" class="form-control shadow-none border border-success me-2" id="inputWord" placeholder="Enter a word...">
+            <button class="btn btn-success" id="btn" type="submit">Search</button>
+        </form>
+
+        <!-- div to print -->
+        <div id="result" class="p-3">
+
+        </div>
+    </div>
+
+
+
+    <!-- js -->
+    <script src="./Bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
